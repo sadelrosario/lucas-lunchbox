@@ -205,7 +205,7 @@ public class shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IBe
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        this.GetComponent<RectTransform>().localScale = shapeSelectedScale * -1;
+        this.GetComponent<RectTransform>().localScale = shapeSelectedScale;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -223,6 +223,7 @@ public class shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IBe
     public void OnEndDrag(PointerEventData eventData)
     {
         this.GetComponent<RectTransform>().localScale = _shapeStartScale;
+        GameEvents.CheckPlaceable();
     }
 
     public void OnPointerDown(PointerEventData eventData)

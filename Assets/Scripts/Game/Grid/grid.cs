@@ -14,10 +14,20 @@ public class grid : MonoBehaviour
 
     private Vector2 _offset = new Vector2(0.0f, 0.0f);
     private List<GameObject> _gridSquares = new List<GameObject>();
+    private void OnEnable()
+    {
+        GameEvents.CheckPlaceable += CheckPlaceable;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.CheckPlaceable -= CheckPlaceable;
+    }
     void Start()
     {
         CreateGrid();
     }
+
 
     // Update is called once per frame
     private void CreateGrid()
@@ -88,6 +98,18 @@ public class grid : MonoBehaviour
             square.GetComponent<RectTransform>().localPosition = new Vector3(startPosition.x + pos_x_offset, startPosition.y - pos_y_offset, 0.0f);
 
             columnNumber++;
+        }
+    }
+
+    private void CheckPlaceable()
+    {
+        foreach (var sq in _gridSquares)
+        {
+            var gridSquare = sq.GetComponent<gridSquare>();
+            if (gridSquare.CheckUsable())
+            {
+                gridSquare.ActivateSquare();
+            }
         }
     }
 }
