@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bread-Go_0: -4796948982046327465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

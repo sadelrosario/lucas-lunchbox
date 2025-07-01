@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LunchBox_0: 8928177529866907590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
