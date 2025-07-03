@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class grid : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int columns = 0;
     public int rows = 0;
     public float squaresGap = 0.1f;
@@ -39,7 +38,8 @@ public class grid : MonoBehaviour
     private void SpawnGridSquares()
     {
         // 0 1 2 3 4 
-        // 5 6 7 8 9 
+        // 5 6 7 8 9
+        // . . . . .  
 
         int squareIndex = 0;
 
@@ -58,6 +58,7 @@ public class grid : MonoBehaviour
 
     private void SetGridSquaresPositions()
     {
+        // Iterates over each gridSquare object and moves it to its correct position
         int columnNumber = 0;
         int rowNumber = 0;
         Vector2 squareGapNumber = new Vector2(0.0f, 0.0f);
@@ -70,6 +71,7 @@ public class grid : MonoBehaviour
 
         foreach (GameObject square in _gridSquares)
         {
+
             if (columnNumber + 1 > columns)
             {
                 squareGapNumber.x = 0;

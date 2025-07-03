@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class shapeStorage : MonoBehaviour
 {
-    public List<shapeData> shapeDataList;
-    public List<shape> shapeList;
+    public List<shapeData> shapeDataList; // List of possible shapes 
+    public List<shape> shapeList; // List of actual shapes
 
     int i = 0;
     void Start()

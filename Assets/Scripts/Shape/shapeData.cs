@@ -9,6 +9,7 @@ public class shapeData : ScriptableObject
     [System.Serializable]
     public class Row
     {
+        // A row is comprised of columns
         public bool[] column;
         private int _size = 0;
         public Row() { }
@@ -19,6 +20,7 @@ public class shapeData : ScriptableObject
 
         public void CreateRow(int size)
         {
+            // A row contains n columns that are n booleans. All are set to false upon instantiation.
             _size = size;
             column = new bool[_size];
             ClearRow();
@@ -33,6 +35,11 @@ public class shapeData : ScriptableObject
         }
     }
 
+    // The following three fields comprise the "Shape Data": 
+    // Firstly, the numbers of rows and columns
+    // Then, a board of Rows. As Rows contain the columns, a group of Rows make up the "Shape Board".
+    // Each Row in the board is cleared upon instantiation.
+
     public int columns = 0;
     public int rows = 0;
     public Row[] board;
@@ -44,6 +51,7 @@ public class shapeData : ScriptableObject
         }
     }
 
+    // Create a board by creating n rows of m columns.
     public void CreateNewBoard()
     {
         board = new Row[rows];
