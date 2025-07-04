@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1137222569424447156, guid: 5161f414d43364144bb838b39e8ac5b5, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 1722450164082071224, guid: 49867810bf3410a4f9ec9a6c379d996c, type: 3}
+    - target: {fileID: 2496557653022765166, guid: 5161f414d43364144bb838b39e8ac5b5, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 1722450164082071224, guid: 49867810bf3410a4f9ec9a6c379d996c, type: 3}
+    - target: {fileID: 2983347959139463164, guid: 5161f414d43364144bb838b39e8ac5b5, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558408538226212372, guid: 5161f414d43364144bb838b39e8ac5b5, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 1722450164082071224, guid: 49867810bf3410a4f9ec9a6c379d996c, type: 3}
     - target: {fileID: 5699499312685406399, guid: 5161f414d43364144bb838b39e8ac5b5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -102,6 +118,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2926216503409812214, guid: fc8aef8d00023a246af80b31fdcc619d, type: 3}
+    - target: {fileID: 7012933352485565290, guid: 5161f414d43364144bb838b39e8ac5b5, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 1722450164082071224, guid: 49867810bf3410a4f9ec9a6c379d996c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

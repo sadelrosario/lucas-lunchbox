@@ -8,6 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 295262715073280791, guid: b9903890042545142a7ad038bb69e654, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142661975215219845, guid: b9903890042545142a7ad038bb69e654, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 319717039927460835, guid: ed677f1c6acdac043a10d972d37603e4, type: 3}
+    - target: {fileID: 1314128186751871743, guid: b9903890042545142a7ad038bb69e654, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 319717039927460835, guid: ed677f1c6acdac043a10d972d37603e4, type: 3}
+    - target: {fileID: 2501249387148161631, guid: b9903890042545142a7ad038bb69e654, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 319717039927460835, guid: ed677f1c6acdac043a10d972d37603e4, type: 3}
+    - target: {fileID: 5489027355430938497, guid: b9903890042545142a7ad038bb69e654, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 319717039927460835, guid: ed677f1c6acdac043a10d972d37603e4, type: 3}
     - target: {fileID: 5586448702941884240, guid: b9903890042545142a7ad038bb69e654, type: 3}
       propertyPath: m_Sprite
       value: 

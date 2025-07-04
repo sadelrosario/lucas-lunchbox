@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5808794077018503367, guid: d178190514b38bc4c88a2c4e9e1f614e, type: 3}
+    - target: {fileID: 3963661225934751594, guid: f59caef85fc72b64686479d16a40f175, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 6299231431951707569, guid: a538106aeb7d13e4d87079c3f208bb45, type: 3}
     - target: {fileID: 9166455206355164156, guid: f59caef85fc72b64686479d16a40f175, type: 3}
       propertyPath: m_Color.b
       value: 0.30980393

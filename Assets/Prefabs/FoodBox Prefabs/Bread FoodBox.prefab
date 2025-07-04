@@ -102,6 +102,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4796948982046327465, guid: 480fecc032493a14a9ae0cca05a14750, type: 3}
+    - target: {fileID: 6388686075381709581, guid: 44a880889b93a6c4787654db88a5138a, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 6299231431951707569, guid: a538106aeb7d13e4d87079c3f208bb45, type: 3}
+    - target: {fileID: 6680368630692118003, guid: 44a880889b93a6c4787654db88a5138a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081489872209932869, guid: 44a880889b93a6c4787654db88a5138a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
