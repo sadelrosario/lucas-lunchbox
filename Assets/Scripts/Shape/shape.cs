@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.U2D.IK;
 using UnityEngine.UIElements;
 
+
 public class shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
 {
     public GameObject squareShapeImage;
@@ -216,7 +217,8 @@ public class shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IBe
 
         Vector2 pos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.transform as RectTransform, eventData.position, Camera.main, out pos);
-        _transform.localPosition = pos + offset;
+        // _transform.localPosition = pos + offset;
+        _transform.localPosition = new Vector2(Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.y)) + offset;
 
     }
 
@@ -224,6 +226,8 @@ public class shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IBe
     {
         this.GetComponent<RectTransform>().localScale = _shapeStartScale;
         GameEvents.CheckPlaceable();
+
+        // _transform.localPosition = new Vector2(Mathf.RoundToInt(_transform.localPosition.x), Mathf.RoundToInt(_transform.localPosition.y)) + offset;
     }
 
     public void OnPointerDown(PointerEventData eventData)

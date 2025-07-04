@@ -7,6 +7,8 @@ public class FoodBlock : MonoBehaviour
     public bool considerOtherObjects = true;
     public Vector2 foodScale = new Vector2(1, 1);
     public Vector4 currentPosition = new Vector4(1, 1, 1, 1);
+    private Vector3 offset;
+    private bool drag = false;
 
     Vector2 gridOffset = Vector2.zero; // zero offsets
     Vector3 gridSize = Vector2.one; // 1x1 grid size
@@ -30,11 +32,23 @@ public class FoodBlock : MonoBehaviour
         UpdatePosition();
 
         // Save actual position as the last position
-        lastParentPos = transform.parent.position;
+        lastParentPos = transform.position;
         lastPos = currentPosition;
 
         // Add position 
         AddPosition(lastPos);
+    }
+
+    void Update()
+    {
+        if (drag)
+        {
+            Debug.Log("Update");
+            transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)) + offset;
+        }
+
+        UpdatePosition();
+        UpdateAll();
     }
 
     // Get recent values of the Grid
@@ -46,6 +60,9 @@ public class FoodBlock : MonoBehaviour
 
     void OnMouseDown()
     {
+        drag = true;
+        Debug.Log("Down");
+
         // Remove the last position
         RemovePosition(lastPos);
 
@@ -59,10 +76,12 @@ public class FoodBlock : MonoBehaviour
 
         transform.localPosition = newPos;
 
+        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         UpdatePosition();
     }
 
-    void OnMouseDrag()
+    void OnDrag()
     {
         // Get World Point using the mouse position
         screenPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
@@ -80,11 +99,13 @@ public class FoodBlock : MonoBehaviour
         }
 
         // Change GameObject position according to adjustment
-        transform.parent.position = SnapToGrid(screenPoint);
+        transform.localPosition = SnapToGrid(screenPoint);
     }
 
     void OnMouseUp()
     {
+        drag = false;
+
         UpdateGridData();
 
         // Save target position 
@@ -165,14 +186,14 @@ public class FoodBlock : MonoBehaviour
     // Update object position variable
     void UpdatePosition()
     {
-        targetPos.x = transform.parent.position.x + (gridSize.x * 0.5f) + 0.5f;
-        targetPos.y = transform.parent.position.x + (gridSize.x * 0.5f) + 0.5f + transform.localScale.x - 1;
+        targetPos.x = transform.position.x + (gridSize.x * 0.5f) + 0.5f;
+        targetPos.y = transform.position.x + (gridSize.x * 0.5f) + 0.5f + transform.localScale.x - 1;
 
-        targetPos.z = -(transform.parent.position.y + (gridSize.y * 0.5f) + 0.5f);
-        targetPos.w = -(transform.parent.position.y + (gridSize.y * 0.5f) + 0.5f) + transform.localScale.y - 1;
+        targetPos.z = -(transform.position.y + (gridSize.y * 0.5f) + 0.5f);
+        targetPos.w = -(transform.position.y + (gridSize.y * 0.5f) + 0.5f) + transform.localScale.y - 1;
 
         // Save actual position
-        lastParentPos = transform.parent.position;
+        lastParentPos = transform.position;
         lastPos = currentPosition;
 
     }
@@ -181,7 +202,7 @@ public class FoodBlock : MonoBehaviour
     public void FixPosition(Vector3 newPos)
     {
         newPos.z = 0;
-        transform.parent.position = transform.parent.position + newPos;
+        transform.position = transform.position + newPos;
 
         UpdateGridData();
         UpdatePosition();
