@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Carrot-Glow_0: -5866938311670324612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

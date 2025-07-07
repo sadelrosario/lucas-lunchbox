@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sausage-Grow_0: 907906874574291293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
