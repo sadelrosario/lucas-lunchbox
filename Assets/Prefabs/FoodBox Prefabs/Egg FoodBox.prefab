@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8419740193095995947
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649555223890836998, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_Name
+      value: Egg FoodBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719187232843696787, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_Text
+      value: '<b>BOILED EGG</b>
+
+        Perfect for breakfast.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971618914331093659, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6410105950799644682, guid: 06921d34f565d4c4992275a9ccb534ef, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c1c66b8504963694c98394d5349736fc, type: 3}
