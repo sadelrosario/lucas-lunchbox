@@ -2,14 +2,15 @@ using UnityEngine;
 using UnityEditor;
 using Mono.Cecil;
 
-[CustomEditor(typeof(shapeData), false)]
-[CanEditMultipleObjects]
+[CustomEditor(typeof(shapeData), false)] // Field false = don't edit any child classes (Rows?)
+[CanEditMultipleObjects] // One editor for each shapeData instance
 [System.Serializable]
 public class ShapeDataDrawer : Editor
 {
     private shapeData ShapeDataInstance => target as shapeData;
     public override void OnInspectorGUI()
     {
+        // Lay out the fields and buttons for the shape editor GUI 
         serializedObject.Update();
         ClearBoardButton();
         EditorGUILayout.Space();
@@ -30,6 +31,7 @@ public class ShapeDataDrawer : Editor
         }
     }
 
+    // Clearing shape drawing board in Editor UI 
     private void ClearBoardButton()
     {
         if (GUILayout.Button("Clear Board"))
@@ -38,6 +40,7 @@ public class ShapeDataDrawer : Editor
         }
     }
 
+    // Drawing input fields in Editor UI
     private void DrawColumnInputFields()
     {
         var columnsTemp = ShapeDataInstance.columns;
@@ -52,6 +55,8 @@ public class ShapeDataDrawer : Editor
         }
     }
 
+    // Actual shape drawing tool. Takes in the shape data and uses buttons to "activate" specific blocks in the shape. 
+    // ShapeData is only the total number of rows/cols. The drawer makes the actual shape.
     private void DrawBoardTable()
     {
         var tableStyle = new GUIStyle("box");

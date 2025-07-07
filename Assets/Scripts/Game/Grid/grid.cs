@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class grid : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int columns = 0;
     public int rows = 0;
     public float squaresGap = 0.1f;
@@ -14,10 +13,20 @@ public class grid : MonoBehaviour
 
     private Vector2 _offset = new Vector2(0.0f, 0.0f);
     private List<GameObject> _gridSquares = new List<GameObject>();
+    private void OnEnable()
+    {
+        GameEvents.CheckPlaceable += CheckPlaceable;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.CheckPlaceable -= CheckPlaceable;
+    }
     void Start()
     {
         CreateGrid();
     }
+
 
     // Update is called once per frame
     private void CreateGrid()
@@ -29,7 +38,8 @@ public class grid : MonoBehaviour
     private void SpawnGridSquares()
     {
         // 0 1 2 3 4 
-        // 5 6 7 8 9 
+        // 5 6 7 8 9
+        // . . . . .  
 
         int squareIndex = 0;
 
@@ -48,6 +58,7 @@ public class grid : MonoBehaviour
 
     private void SetGridSquaresPositions()
     {
+        // Iterates over each gridSquare object and moves it to its correct position
         int columnNumber = 0;
         int rowNumber = 0;
         Vector2 squareGapNumber = new Vector2(0.0f, 0.0f);
@@ -60,6 +71,7 @@ public class grid : MonoBehaviour
 
         foreach (GameObject square in _gridSquares)
         {
+
             if (columnNumber + 1 > columns)
             {
                 squareGapNumber.x = 0;
@@ -88,6 +100,18 @@ public class grid : MonoBehaviour
             square.GetComponent<RectTransform>().localPosition = new Vector3(startPosition.x + pos_x_offset, startPosition.y - pos_y_offset, 0.0f);
 
             columnNumber++;
+        }
+    }
+
+    private void CheckPlaceable()
+    {
+        foreach (var sq in _gridSquares)
+        {
+            var gridSquare = sq.GetComponent<gridSquare>();
+            if (gridSquare.CheckUsable())
+            {
+                gridSquare.ActivateSquare();
+            }
         }
     }
 }
