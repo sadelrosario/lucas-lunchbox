@@ -110,6 +110,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8486074932419227095, guid: 44a880889b93a6c4787654db88a5138a, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 2318709221735263416, guid: 41559878d8b1ab74d92e13d951ddfc6b, type: 3}
     - target: {fileID: 9081489872209932869, guid: 44a880889b93a6c4787654db88a5138a, type: 3}
       propertyPath: m_SortingLayer
       value: 0
