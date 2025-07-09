@@ -7,7 +7,9 @@ using UnityEngine;
 public class Food : MonoBehaviour
 {
     SpriteRenderer sprite;
-    public enum Type { Go, Grow, Glow }; // type of food
+    public enum GGGType { Go, Grow, Glow } // type of food
+    public GGGType type;
+    public int scoreValue;
     private bool drag = false;
     private bool collide;
     public float gridSize = 1.5f;
@@ -22,7 +24,7 @@ public class Food : MonoBehaviour
 
         //Fetch the SpriteRenderer from the GameObject
         sprite = GetComponent<SpriteRenderer>();
-        sprite.color = new Color(1,1,1,1);
+        sprite.color = new Color(1, 1, 1, 1);
 
     }
 
@@ -37,7 +39,7 @@ public class Food : MonoBehaviour
 
         if (!collide)
         {
-            sprite.color = new Color(1,1,1,1);
+            sprite.color = new Color(1, 1, 1, 1);
         }
 
         // 
@@ -82,5 +84,15 @@ public class Food : MonoBehaviour
             sprite.color = new Color(0.93f, 0.34f, 0.22f, 0.5f);
             Debug.Log("COLLIDING");
         }
+    }
+
+    public int getFoodScore()
+    {
+        return scoreValue;
+    }
+
+    public GGGType getGGG()
+    {
+        return type;
     }
 }

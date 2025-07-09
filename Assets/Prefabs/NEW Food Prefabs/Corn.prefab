@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 27487696217744853, guid: 01711d957f2014142b70ef5579aa9487, type: 3}
+      propertyPath: scoreValue
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1448011931877144140, guid: 01711d957f2014142b70ef5579aa9487, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3
