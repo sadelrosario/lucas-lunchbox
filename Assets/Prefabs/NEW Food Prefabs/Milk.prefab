@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2454198465929610944, guid: c44e08ff3022d4842ba4d84545a6d736, type: 3}
+      propertyPath: scoreValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3924579505747514713, guid: c44e08ff3022d4842ba4d84545a6d736, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 3

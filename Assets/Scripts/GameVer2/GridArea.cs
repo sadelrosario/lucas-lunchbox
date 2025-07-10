@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class GridArea : MonoBehaviour
 {
-    private int totalScore;
+    public static int totalScore, gggEnd;
     private int goNum, growNum, glowNum;
     public Vector2 gridSize;
     public List<Vector3> occupiedPositions;
@@ -25,23 +25,23 @@ public class GridArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    void getFood()
+    {
         var items = FindObjectsOfType<Food>();
-
         storedFood.Clear();
-
         foreach (Food f in items)
         {
-            // get its position and update the occupied position list
-
-            // add food object into the list of stored food
             storedFood.Add(f);
         }
     }
 
     public int getTotalScore()
     {
-        var items = FindObjectsOfType<Food>();
-        foreach (Food f in items)
+        getFood();
+        foreach (Food f in storedFood)
         {
             totalScore += f.getFoodScore();
             Debug.Log(totalScore);
@@ -51,9 +51,8 @@ public class GridArea : MonoBehaviour
 
     public int getEnding()
     {
-        var items = FindObjectsOfType<Food>();
-
-        foreach (Food f in items)
+        getFood();
+        foreach (Food f in storedFood)
         {
             if (f.getGGG().ToString() == "Go")
             {
@@ -71,24 +70,27 @@ public class GridArea : MonoBehaviour
 
         //1 = go, 2 = grow, 3 = glow, 4 = even
         if ((goNum > growNum && goNum > glowNum) //go >> grow/glow
-        || (goNum > glowNum && growNum > glowNum)) //go/grow >> glow
+        || (goNum == growNum && growNum > glowNum)) //go/grow >> glow
         {
-            return 1;
+            gggEnd = 1;
         }
         if ((growNum > goNum && growNum > glowNum) //grow >> go/glow
-        || (growNum > goNum && glowNum > goNum)) //grow/glow >> go
+        || (growNum == glowNum && glowNum > goNum)) //grow/glow >> go
         {
-            return 2;
+            gggEnd = 2;
         }
         if ((glowNum > growNum && glowNum > goNum) //glow >> go/grow
-        || (glowNum > growNum && goNum > growNum)) //glow/go >> grow
+        || (glowNum == goNum && goNum > growNum)) //glow/go >> grow
         {
-            return 3;
+            gggEnd = 3;
         }
         if (goNum == growNum && growNum == glowNum) //all equal
         {
-            return 4;
+            gggEnd = 4;
         }
-        return 0;
+        Debug.Log("Go: " + goNum);
+        Debug.Log("Grow: " + growNum);
+        Debug.Log("Glow: " + glowNum);
+        return gggEnd;
     }
 }
