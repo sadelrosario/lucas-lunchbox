@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2494055258815144270, guid: c1c66b8504963694c98394d5349736fc, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 6557833173796510173, guid: 758db8ca16553df4dbba0f66d537777e, type: 3}
     - target: {fileID: 5702005260983798175, guid: c1c66b8504963694c98394d5349736fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

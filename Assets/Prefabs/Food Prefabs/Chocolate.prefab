@@ -93,6 +93,10 @@ PrefabInstance:
       value: Chocolate
       objectReference: {fileID: 0}
     - target: {fileID: 5192959823282766839, guid: 419a599fee6d05f48ab7987c0cc0a4ec, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192959823282766839, guid: 419a599fee6d05f48ab7987c0cc0a4ec, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2926216503409812214, guid: fc8aef8d00023a246af80b31fdcc619d, type: 3}

@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6568369421462656069, guid: 96d68d784040eeb49aab6330246495c0, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 4077058181974620635, guid: 6ec32867683a28a4f9f7dd9069a60732, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
