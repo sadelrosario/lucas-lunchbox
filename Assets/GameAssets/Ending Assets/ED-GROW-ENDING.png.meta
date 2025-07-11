@@ -130,7 +130,7 @@ TextureImporter:
         width: 218
         height: 210
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: ED-GROW-ENDING_1
       rect:
         serializedVersion: 2
-        x: 121
+        x: 0
         y: 0
-        width: 1272
+        width: 1393
         height: 1749
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4058386, y: -0.0009245624}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,7 +174,7 @@ TextureImporter:
         width: 101
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,7 +196,7 @@ TextureImporter:
         width: 273
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7f95e524eeae6024d85192ba1d76ab30
     internalID: 0
     vertices: []
     indices: 
@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ED-GROW-ENDING_0: -5676242303879945927
+      ED-GROW-ENDING_1: -8646399272477269044
+      ED-GROW-ENDING_2: -8119185838066982942
+      ED-GROW-ENDING_3: -3707619217025349461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,36 +12,23 @@ public class LogicScript : MonoBehaviour
         gridAreaScript = GameObject.FindGameObjectWithTag("Grid").GetComponent<GridArea>();
         totalScore = gridAreaScript.getTotalScore();
         GGG = gridAreaScript.getEnding();
+        DontDestroy.Instance.DD_Score = totalScore;
+        DontDestroy.Instance.DD_GGG = GGG;
         Debug.Log("Total: " + totalScore);
         Debug.Log("End: " + GGG);
-        SceneManager.LoadScene("GameEnd");
+        SceneManager.LoadScene("Endings");
     }
 
     //1 = go, 2 = grow, 3 = glow, 4 = even
-    public void chooseEnding()
-    {
-        if (totalScore < 50)
-        {
-            //starved ending
-        }
-        else
-        {
-            if (GGG == 1)
-            {
-                //go ending
-            }
-            else if (GGG == 2)
-            {
-                //grow ending
-            }
-            else if (GGG == 3)
-            {
-                //glow ending
-            }
-            else if (GGG == 4)
-            {
-                //healthy ending
-            }
-        }
-    }
+
+    //public int GetScore()
+    //{
+    //    return totalScore;
+    //}
+
+    //public int GetGGG()
+    //{
+    //    return GGG;
+    //}
+    
 }
