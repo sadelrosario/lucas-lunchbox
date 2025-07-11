@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 413553707484832328, guid: 9ec1117cfbfac5348b8eb9ed37104a9a, type: 3}
+      propertyPath: press.m_Name
+      value: Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 413553707484832328, guid: 9ec1117cfbfac5348b8eb9ed37104a9a, type: 3}
+      propertyPath: screenPosition.m_Name
+      value: Screen Position
+      objectReference: {fileID: 0}
     - target: {fileID: 1280363852860305873, guid: 9ec1117cfbfac5348b8eb9ed37104a9a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2

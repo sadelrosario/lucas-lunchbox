@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 835374404286167316, guid: f271f8c37d9469947928493d87041ec9, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1671607240485729100, guid: f271f8c37d9469947928493d87041ec9, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -91,6 +95,14 @@ PrefabInstance:
     - target: {fileID: 3186325805209650704, guid: f271f8c37d9469947928493d87041ec9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
       value: -0.11398007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053770402348815753, guid: f271f8c37d9469947928493d87041ec9, type: 3}
+      propertyPath: press.m_Name
+      value: Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053770402348815753, guid: f271f8c37d9469947928493d87041ec9, type: 3}
+      propertyPath: screenPosition.m_Name
+      value: Screen Position
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2926216503409812214, guid: fc8aef8d00023a246af80b31fdcc619d, type: 3}
+    - target: {fileID: 1450340874794323696, guid: 90f3f28466e30c74a8c0c630acc60721, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1707666821656759971, guid: 90f3f28466e30c74a8c0c630acc60721, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.16
@@ -55,6 +59,14 @@ PrefabInstance:
     - target: {fileID: 1707666821656759971, guid: 90f3f28466e30c74a8c0c630acc60721, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879664363860927085, guid: 90f3f28466e30c74a8c0c630acc60721, type: 3}
+      propertyPath: press.m_Name
+      value: Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879664363860927085, guid: 90f3f28466e30c74a8c0c630acc60721, type: 3}
+      propertyPath: screenPosition.m_Name
+      value: Screen Position
       objectReference: {fileID: 0}
     - target: {fileID: 3715302288824791540, guid: 90f3f28466e30c74a8c0c630acc60721, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y

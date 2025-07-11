@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5605441039856424403, guid: 758db8ca16553df4dbba0f66d537777e, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5645537384893502848, guid: 758db8ca16553df4dbba0f66d537777e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.16
@@ -115,6 +119,14 @@ PrefabInstance:
     - target: {fileID: 7666608730641361623, guid: 758db8ca16553df4dbba0f66d537777e, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
       value: -0.120589405
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087345687306811726, guid: 758db8ca16553df4dbba0f66d537777e, type: 3}
+      propertyPath: press.m_Name
+      value: Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087345687306811726, guid: 758db8ca16553df4dbba0f66d537777e, type: 3}
+      propertyPath: screenPosition.m_Name
+      value: Screen Position
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

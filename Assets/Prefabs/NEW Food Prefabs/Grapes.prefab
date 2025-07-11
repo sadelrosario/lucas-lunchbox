@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 571874268042792792, guid: 3b613442a10291d4ba3af82c793087a4, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1236001661785244502, guid: 3b613442a10291d4ba3af82c793087a4, type: 3}
       propertyPath: m_Name
       value: Grapes
@@ -111,6 +115,14 @@ PrefabInstance:
     - target: {fileID: 2323987655980757084, guid: 3b613442a10291d4ba3af82c793087a4, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
       value: -0.124341786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763195858128004037, guid: 3b613442a10291d4ba3af82c793087a4, type: 3}
+      propertyPath: press.m_Name
+      value: Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763195858128004037, guid: 3b613442a10291d4ba3af82c793087a4, type: 3}
+      propertyPath: screenPosition.m_Name
+      value: Screen Position
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

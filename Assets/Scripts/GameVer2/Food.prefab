@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1092320277708158803}
   - component: {fileID: 2920427581138307159}
   - component: {fileID: 4395101664241015758}
+  - component: {fileID: 8581307858451744254}
   m_Layer: 3
   m_Name: Food
   m_TagString: Food
@@ -109,7 +110,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -180,6 +181,116 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171c5556d600e5d419590168ee68e9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  press:
+    m_Name: Press
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: c737fa58-2454-4709-8e64-72a2d560515a
+    m_Processors: 
+    m_Interactions: Press
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c6abe6a0-9cec-499f-b70e-9e05b327b2b9
+      m_Path: <Mouse>/press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Press
+      m_Flags: 0
+    - m_Name: 
+      m_Id: cd32b8ed-7c7a-4a2f-8842-21516adbe2a5
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Press
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ea765411-53b6-4356-8c08-8ddb789ed016
+      m_Path: <Touchscreen>/Press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Press
+      m_Flags: 0
+    m_Flags: 0
+  screenPosition:
+    m_Name: Screen Position
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: 76c70d6f-183a-4e84-b065-d156f9d45f63
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 7dcc9568-77f0-4045-b950-dc534e3f710e
+      m_Path: <Mouse>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Screen Position
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 2c2f29c4-c634-4443-bf73-584b67fcc90c
+      m_Path: <Touchscreen>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Screen Position
+      m_Flags: 0
+    m_Flags: 0
   gridSize: 0.88
   currentPos: {x: 0, y: 0, z: 0}
-  anchorPoint: {x: 0, y: 0}
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &8581307858451744254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864542931149405021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: cf89e8b98cda3f249951081d056fb5fa, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4395101664241015758}
+        m_TargetAssemblyTypeName: Food, Assembly-CSharp
+        m_MethodName: Press
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 151f5934-20b6-41dd-8ac5-5604391fb2c8
+    m_ActionName: 'player/press[/Mouse/press]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 92eaaea9-4800-44b8-b982-45ce286f951c
+    m_ActionName: 'player/drag[/Mouse/position]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

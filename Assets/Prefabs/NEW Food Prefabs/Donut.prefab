@@ -88,6 +88,14 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[1].Array.data[3].y
       value: -2.0995226
       objectReference: {fileID: 0}
+    - target: {fileID: 2128575995450628424, guid: 6ec32867683a28a4f9f7dd9069a60732, type: 3}
+      propertyPath: press.m_Name
+      value: Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128575995450628424, guid: 6ec32867683a28a4f9f7dd9069a60732, type: 3}
+      propertyPath: screenPosition.m_Name
+      value: Screen Position
+      objectReference: {fileID: 0}
     - target: {fileID: 3300714121642145158, guid: 6ec32867683a28a4f9f7dd9069a60732, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.16
@@ -126,6 +134,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3300714121642145158, guid: 6ec32867683a28a4f9f7dd9069a60732, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340548026511029717, guid: 6ec32867683a28a4f9f7dd9069a60732, type: 3}
+      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3673081108437876621, guid: 6ec32867683a28a4f9f7dd9069a60732, type: 3}

@@ -56,6 +56,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6539807750280550381, guid: c43c141b201424e46b96ff4ca990a713, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7571723413308439408, guid: c43c141b201424e46b96ff4ca990a713, type: 3}
+      propertyPath: press.m_Name
+      value: Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 7571723413308439408, guid: c43c141b201424e46b96ff4ca990a713, type: 3}
+      propertyPath: screenPosition.m_Name
+      value: Screen Position
+      objectReference: {fileID: 0}
     - target: {fileID: 9038111577430108393, guid: c43c141b201424e46b96ff4ca990a713, type: 3}
       propertyPath: m_Points.m_Paths.Array.size
       value: 1
