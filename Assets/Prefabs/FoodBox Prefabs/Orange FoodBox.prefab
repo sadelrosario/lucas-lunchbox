@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6216171535717102437, guid: 18fc69bcbe120ce4e8170351d7701254, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 5514915098340193109, guid: 7eac0d2c4cb421a4d8c324196423b4ba, type: 3}
     - target: {fileID: 6739410134342003959, guid: 18fc69bcbe120ce4e8170351d7701254, type: 3}
       propertyPath: m_Color.b
       value: 0.21518122

@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken FoodBox
       objectReference: {fileID: 0}
+    - target: {fileID: 4988154292037657804, guid: 531a5d2189842b845aa49af8f00a8ade, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 2116486163300496666, guid: f271f8c37d9469947928493d87041ec9, type: 3}
     - target: {fileID: 5690875624612051806, guid: 531a5d2189842b845aa49af8f00a8ade, type: 3}
       propertyPath: m_Color.b
       value: 0.21472637

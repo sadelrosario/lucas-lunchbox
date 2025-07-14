@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1692264086187995253, guid: 3c7d2686a200b4f49af9d7c6fe42f2e3, type: 3}
+    - target: {fileID: 8368630699562433390, guid: dd4dad0b2bea8b24aa869e653ee02555, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 509389202265957971, guid: c44e08ff3022d4842ba4d84545a6d736, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

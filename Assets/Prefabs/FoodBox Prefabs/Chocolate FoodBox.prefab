@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 2496557653022765166, guid: 5161f414d43364144bb838b39e8ac5b5, type: 3}
       propertyPath: foodPrefab
       value: 
-      objectReference: {fileID: 1722450164082071224, guid: 49867810bf3410a4f9ec9a6c379d996c, type: 3}
+      objectReference: {fileID: 2701880146934154566, guid: 01711d957f2014142b70ef5579aa9487, type: 3}
     - target: {fileID: 2983347959139463164, guid: 5161f414d43364144bb838b39e8ac5b5, type: 3}
       propertyPath: m_SortingLayer
       value: 0
