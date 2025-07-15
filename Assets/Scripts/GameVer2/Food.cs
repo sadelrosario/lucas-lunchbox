@@ -7,15 +7,21 @@ using UnityEngine;
 public class Food : MonoBehaviour
 {
     SpriteRenderer sprite;
+    
     public enum GGGType { Go, Grow, Glow } // type of food
     public GGGType type;
     public int scoreValue;
     private bool drag = false;
     private bool collide;
-    public float gridSize = 1.5f;
+    
     private Vector3 offset;
     public Vector3 currentPos;
     public Vector2 anchorPoint; // used for locating its spawning point
+
+    // grid math
+    private float baseGridSize = 0.88f; // base/original grid size
+    private float scaleValue = 0.00625f; // base/original scale of the canvas on our original screen size (2560 x 1600)
+    private float gridSize;
 
     void Start()
     {
@@ -25,12 +31,17 @@ public class Food : MonoBehaviour
         //Fetch the SpriteRenderer from the GameObject
         sprite = GetComponent<SpriteRenderer>();
         sprite.color = new Color(1, 1, 1, 1);
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        RectTransform canvasTransform = GameObject.Find("Canvas").GetComponent<RectTransform>();
+        gridSize = baseGridSize * (canvasTransform.transform.localScale.x / scaleValue);
+        //Debug.Log("BASE GRID SIZE: " + baseGridSize);
+        //Debug.Log("SCALE: " + canvasTransform.transform.localScale.x);
+        //Debug.Log("GRID SIZE: " + gridSize);
         if (drag) // movement snaps to grid size
         {
             currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;

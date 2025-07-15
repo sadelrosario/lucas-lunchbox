@@ -18,7 +18,10 @@ public class FoodSpawner : MonoBehaviour
     public void SpawnFood()
     {
         Transform spawnPos = GameObject.Find("SpawnPoint").transform;
-        Instantiate(foodPrefab, spawnPos.position, Quaternion.identity);
+        //Instantiate(foodPrefab, spawnPos.position, Quaternion.identity, GameObject.Find("Canvas").transform);
+        Instantiate(foodPrefab, spawnPos.position, Quaternion.identity, spawnPos);
+        //GameObject food = Instantiate(foodPrefab, new Vector3(0,0,0), Quaternion.identity);
+        //food.transform.SetParent(GameObject.Find("Canvas").transform, worldPositionStays: false);
         //Instantiate(foodPrefab, transform.position, Quaternion.identity);
     } 
 }
