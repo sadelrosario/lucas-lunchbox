@@ -7,6 +7,11 @@ public class LogicScript : MonoBehaviour
     public int totalScore, GGG;
     GridArea gridAreaScript;
 
+    void Start()
+    {
+        Time.timeScale = 1;
+    } 
+
     public void gameEnd()
     {
         gridAreaScript = GameObject.FindGameObjectWithTag("Grid").GetComponent<GridArea>();
@@ -19,16 +24,10 @@ public class LogicScript : MonoBehaviour
         SceneManager.LoadScene("Endings");
     }
 
-    //1 = go, 2 = grow, 3 = glow, 4 = even
-
-    //public int GetScore()
-    //{
-    //    return totalScore;
-    //}
-
-    //public int GetGGG()
-    //{
-    //    return GGG;
-    //}
+    public void reloadGame()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
+    }
     
 }

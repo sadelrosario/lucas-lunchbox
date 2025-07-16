@@ -48,6 +48,7 @@ public class Food : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
         // set camera
         camera = Camera.main;
 
