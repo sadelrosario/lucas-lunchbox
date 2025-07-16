@@ -14,13 +14,17 @@ public class Food : MonoBehaviour
     public int scoreValue;
     private bool dragging = false;
     private bool collide;
-    public float gridSize = 0.88f;
     private Vector3 offset;
     public Vector3 currentPos;
     public LayerMask hitLayer;
     public RaycastHit hit;
     public Ray ray;
     Camera camera;
+
+    // grid math
+    private float baseGridSize = 0.88f; // base/original grid size
+    private float scaleValue = 0.00625f; // base/original scale of the canvas on our original screen size (2560 x 1600)
+    private float gridSize;
 
     private Vector3 WorldPos // read the world position
     {
@@ -96,6 +100,8 @@ public class Food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RectTransform canvasTransform = GameObject.Find("Canvas").GetComponent<RectTransform>();
+        gridSize = baseGridSize * (canvasTransform.transform.localScale.x / scaleValue);
 
         if (!collide)
         {
