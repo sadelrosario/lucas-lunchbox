@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class EndingSystem : MonoBehaviour
 {
+    // please do not delete the door, or else this scene will break.
+
     public Animator lucaAnim;
     public GameObject ui;
     public Text score;
@@ -11,7 +13,13 @@ public class EndingSystem : MonoBehaviour
 
     private LogicScript logic;
     private int totalScore, GGG;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
     void Start()
     {
         logic = GameObject.Find("LogicManager").GetComponent<LogicScript>();
@@ -20,11 +28,7 @@ public class EndingSystem : MonoBehaviour
             totalScore = DontDestroy.Instance.DD_Score;
             GGG = DontDestroy.Instance.DD_GGG;
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
         score.text = totalScore.ToString();
 
         if (totalScore < 50)
@@ -32,13 +36,15 @@ public class EndingSystem : MonoBehaviour
             //starved ending
             lucaAnim.Play("luca_bad");
             endingName.text = "BAD ENDING";
+            audioManager.PlaySFX(audioManager.fail);
         }
         else
         {
+            audioManager.PlaySFX(audioManager.win);
             if (GGG == 1)
             {
                 //go ending
-                lucaAnim.Play("luca_good"); // temporary until we get the go asset
+                lucaAnim.Play("luca_go");
                 endingName.text = "GO ENDING";
             }
             else if (GGG == 2)
@@ -62,6 +68,12 @@ public class EndingSystem : MonoBehaviour
         }
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     public void ShowUI()
     {
         ui.SetActive(true);
@@ -72,5 +84,10 @@ public class EndingSystem : MonoBehaviour
     {
         Debug.Log("You should be retrying game NOW");
         SceneManager.LoadScene("Game");
+    }
+
+    public void GoHome()
+    {
+        SceneManager.LoadScene("Title");
     }
 }
