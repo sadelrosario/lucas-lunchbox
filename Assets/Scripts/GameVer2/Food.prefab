@@ -29,9 +29,9 @@ Transform:
   m_GameObject: {fileID: 1864542931149405021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5, y: 2.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -6.16, y: 3.52, z: 0}
+  m_LocalScale: {x: 0.88, y: 0.88, z: 0.88}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -133,7 +133,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -180,6 +180,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171c5556d600e5d419590168ee68e9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 0.5
+  press:
+    m_Name: Press
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 8ff480de-dd25-415e-ab95-57292d1d7f39
+    m_Processors: 
+    m_Interactions: Press
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 57d588d1-12d3-445b-95d2-bb35fd104758
+      m_Path: <Mouse>/press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Press
+      m_Flags: 0
+    - m_Name: 
+      m_Id: c1697db8-5153-4dbb-ac21-6d9748ef45fe
+      m_Path: <Touchscreen>/Press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Press
+      m_Flags: 0
+    m_Flags: 0
+  screenPosition:
+    m_Name: Screen Position
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: 36993d2b-130c-46e1-b736-d285a08040a4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 06671f53-bc28-4d86-895b-1f2ca3316c9b
+      m_Path: <Mouse>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Screen Position
+      m_Flags: 0
+    - m_Name: 
+      m_Id: bc22ca3a-70a1-4333-be51-5f83bd3d86c3
+      m_Path: <Touchscreen>/primaryTouch/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Screen Position
+      m_Flags: 0
+    m_Flags: 0
+  type: 0
+  scoreValue: 0
+  gridSize: 0.88
   currentPos: {x: 0, y: 0, z: 0}
-  anchorPoint: {x: 0, y: 0}
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 8

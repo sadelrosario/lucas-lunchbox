@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Donut FoodBox
       objectReference: {fileID: 0}
+    - target: {fileID: 5271719954568642263, guid: 84e2378849cd6b74991baf66ee39b26b, type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 5479345915463572451, guid: c43c141b201424e46b96ff4ca990a713, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

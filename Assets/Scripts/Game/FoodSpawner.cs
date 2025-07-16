@@ -18,7 +18,6 @@ public class FoodSpawner : MonoBehaviour
     public void SpawnFood()
     {
         Transform spawnPos = GameObject.Find("SpawnPoint").transform;
-        Instantiate(foodPrefab, spawnPos.position, Quaternion.identity);
-        //Instantiate(foodPrefab, transform.position, Quaternion.identity);
+        Instantiate(foodPrefab, spawnPos.position, Quaternion.identity, spawnPos);
     } 
 }
