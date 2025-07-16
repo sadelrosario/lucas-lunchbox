@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Title-ButtonSettings_0: -1626398686494093710
+      Title-ButtonSettings_1: 1942416433863569951
+      Title-ButtonSettings_2: -2544880051234527929
+      Title-ButtonSettings_3: 251845838013154714
+      Title-ButtonSettings_4: 9112939103393706578
+      Title-ButtonSettings_5: 1951359992303701874
+      Title-ButtonSettings_6: 6917124966169346823
+      Title-ButtonSettings_7: 2977415435869782648
+      Title-ButtonSettings_8: -1401013005216034202
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

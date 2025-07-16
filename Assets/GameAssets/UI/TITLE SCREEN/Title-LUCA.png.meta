@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Title-LUCA_0: 1043084310698429799
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

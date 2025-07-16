@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Title-ButtonTutorial_0: 8163030066973605478
+      Title-ButtonTutorial_1: -6565606728673353179
+      Title-ButtonTutorial_2: -1592386596905109713
+      Title-ButtonTutorial_3: 7413966961222411054
+      Title-ButtonTutorial_4: 74600384419762682
+      Title-ButtonTutorial_5: 6100703151929018642
+      Title-ButtonTutorial_6: 5695217839441090209
+      Title-ButtonTutorial_7: 8697163129829393414
+      Title-ButtonTutorial_8: -582224542804212954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
