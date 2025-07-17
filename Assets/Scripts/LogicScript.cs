@@ -10,7 +10,7 @@ public class LogicScript : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
-    } 
+    }
 
     public void gameEnd()
     {
@@ -22,6 +22,7 @@ public class LogicScript : MonoBehaviour
         Debug.Log("Total: " + totalScore);
         Debug.Log("End: " + GGG);
         SceneManager.LoadScene("Endings");
+        // add pop out warning if food items are colliding
     }
 
     public void reloadGame()

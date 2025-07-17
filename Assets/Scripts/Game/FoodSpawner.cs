@@ -3,21 +3,16 @@ using UnityEngine;
 public class FoodSpawner : MonoBehaviour
 {
     public GameObject foodPrefab;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    AudioManager audioManager;
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     public void SpawnFood()
     {
         Transform spawnPos = GameObject.Find("SpawnPoint").transform;
         Instantiate(foodPrefab, spawnPos.position, Quaternion.identity, spawnPos);
+        audioManager.PlaySFX(audioManager.food_click);
     } 
 }
