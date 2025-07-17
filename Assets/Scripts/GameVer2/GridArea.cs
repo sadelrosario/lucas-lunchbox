@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class GridArea : MonoBehaviour
 {
-    public static int totalScore, gggEnd;
+    public int totalScore, gggEnd;
     private int goNum, growNum, glowNum;
     public Vector2 gridSize;
     public List<Vector3> occupiedPositions;
@@ -15,7 +15,9 @@ public class GridArea : MonoBehaviour
     void Start()
     {
         //Set the tag of this GameObject to Food
+        Time.timeScale = 1;
         gameObject.tag = "Grid";
+        storedFood.Clear();
         totalScore = 0;
         goNum = 0;
         growNum = 0;
@@ -30,11 +32,14 @@ public class GridArea : MonoBehaviour
 
     void getFood()
     {
-        var items = FindObjectsOfType<Food>();
         storedFood.Clear();
+        var items = FindObjectsOfType<Food>();
         foreach (Food f in items)
         {
-            storedFood.Add(f);
+            if (f != null)
+            {
+                storedFood.Add(f);
+            }
         }
     }
 
