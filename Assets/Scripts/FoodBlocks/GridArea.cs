@@ -98,4 +98,21 @@ public class GridArea : MonoBehaviour
         Debug.Log("Glow: " + glowNum);
         return gggEnd;
     }
+
+    public bool foodColliding()
+    {
+        getFood();
+        foreach (Food f in storedFood)
+        {
+            if (f.isColliding())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+    }
 }
