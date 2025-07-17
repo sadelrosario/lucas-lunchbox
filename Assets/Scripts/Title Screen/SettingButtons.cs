@@ -6,6 +6,7 @@ public class SettingButtons : MonoBehaviour
 {
     public Button openSettings;
     public Button closeSettings;
+    public Button tutorial;
     public TextMeshProUGUI settingsText;
     public Image settingsBG;
     public Slider musicSlide;
@@ -23,6 +24,7 @@ public class SettingButtons : MonoBehaviour
         SFXSlide.gameObject.SetActive(true);
 
         openSettings.gameObject.SetActive(false);
+        tutorial.gameObject.SetActive(false);
     }
     public void SettingsClosed()
     {
@@ -36,5 +38,8 @@ public class SettingButtons : MonoBehaviour
         SFXSlide.gameObject.SetActive(false);
 
         closeSettings.gameObject.SetActive(false);
+
+        tutorial.gameObject.SetActive(true);
+        tutorial.interactable = true;
     }
 }
