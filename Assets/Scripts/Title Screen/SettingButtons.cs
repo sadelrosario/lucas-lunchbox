@@ -11,6 +11,7 @@ public class SettingButtons : MonoBehaviour
     public Image settingsBG;
     public Slider musicSlide;
     public Slider SFXSlide;
+    public 
 
     public void SettingsOpened()
     {
