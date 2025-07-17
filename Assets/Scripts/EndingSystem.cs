@@ -82,12 +82,14 @@ public class EndingSystem : MonoBehaviour
 
     public void RetryGame()
     {
+        audioManager.PlaySFX(audioManager.gen_click);
         Debug.Log("You should be retrying game NOW");
         SceneManager.LoadScene("Game");
     }
 
     public void GoHome()
     {
+        audioManager.PlaySFX(audioManager.gen_click);
         SceneManager.LoadScene("Title");
     }
 }
