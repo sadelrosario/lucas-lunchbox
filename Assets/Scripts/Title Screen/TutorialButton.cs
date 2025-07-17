@@ -11,8 +11,17 @@ public class TutorialButton : MonoBehaviour
     public Image tutorialBG;
     public Image tutorial;
 
+    AudioManager audioManager;
+
+    void Awake()
+    {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
+
     public void TutorialOpened()
     {
+        audioManager.PlaySFX(audioManager.gen_click);
+
         closeTutorial.gameObject.SetActive(true);
         closeTutorial.interactable = true;
 
@@ -25,6 +34,8 @@ public class TutorialButton : MonoBehaviour
     }
     public void TutorialClosed()
     {
+        audioManager.PlaySFX(audioManager.gen_click);
+
         openTutorial.gameObject.SetActive(true);
         openTutorial.interactable = true;
 

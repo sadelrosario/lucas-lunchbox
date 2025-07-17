@@ -7,9 +7,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource soundFXSource;
     public AudioClip music;
-    public AudioClip click;
+    public AudioClip food_click;
     public AudioClip win;
     public AudioClip fail;
+    public AudioClip gen_click;
 
     public void Awake()
     {

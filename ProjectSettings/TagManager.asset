@@ -7,6 +7,7 @@ TagManager:
   - Food
   - Grid
   - Logic
+  - Audio
   layers:
   - Default
   - TransparentFX

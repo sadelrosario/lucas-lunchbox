@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Analytics;
 
 public class SettingButtons : MonoBehaviour
 {
@@ -10,10 +11,19 @@ public class SettingButtons : MonoBehaviour
     public TextMeshProUGUI settingsText;
     public Image settingsBG;
     public Slider musicSlide;
-    public Slider SFXSlide; 
+    public Slider SFXSlide;
+
+    AudioManager audioManager;
+
+    void Awake()
+    {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
 
     public void SettingsOpened()
     {
+        audioManager.PlaySFX(audioManager.gen_click);
+
         closeSettings.gameObject.SetActive(true);
         closeSettings.interactable = true;
 
@@ -28,6 +38,8 @@ public class SettingButtons : MonoBehaviour
     }
     public void SettingsClosed()
     {
+        audioManager.PlaySFX(audioManager.gen_click);
+
         openSettings.gameObject.SetActive(true);
         openSettings.interactable = true;
 
