@@ -117,6 +117,7 @@ public class Food : MonoBehaviour
 
         if (collision.gameObject.tag == "Grid") // get collision of grid area by
         {
+            press.Disable();
             Destroy(gameObject, 0.5f); // food gets destroyed after one second
             // Debug.Log("GRID");
         }
