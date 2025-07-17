@@ -30,5 +30,9 @@ public class LogicScript : MonoBehaviour
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
-    
+
+    public void LoadHome()
+    {
+        SceneManager.LoadScene("Title");
+    }
 }
