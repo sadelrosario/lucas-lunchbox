@@ -127,7 +127,7 @@ public class Food : MonoBehaviour
         {
             sprite.color = new Color(1, 1, 1, 1);
             collide = false;
-        }
+        } 
 
     }
 
@@ -140,6 +140,15 @@ public class Food : MonoBehaviour
             // make it glow red
             sprite.color = new Color(0.93f, 0.34f, 0.22f, 0.5f);
             // Debug.Log("COLLIDING");
+        }
+    }
+
+    void OnCollisionStay(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Food") // if object collides with another food
+        {
+            collide = true;
+            sprite.color = new Color(0.93f, 0.34f, 0.22f, 0.5f);
         }
     }
 
