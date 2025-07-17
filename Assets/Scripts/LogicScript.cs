@@ -12,7 +12,7 @@ public class LogicScript : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void gameEnd()
+    public void GameEnd()
     {
         gridAreaScript = GameObject.FindGameObjectWithTag("Grid").GetComponent<GridArea>();
         totalScore = gridAreaScript.getTotalScore();
@@ -25,10 +25,15 @@ public class LogicScript : MonoBehaviour
         // add pop out warning if food items are colliding
     }
 
-    public void reloadGame()
+    public void ReloadGame()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
+    }
+
+    public void LoadHome()
+    {
+        SceneManager.LoadScene("Title");
     }
     
 }
