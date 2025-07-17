@@ -10,8 +10,7 @@ public class SettingButtons : MonoBehaviour
     public TextMeshProUGUI settingsText;
     public Image settingsBG;
     public Slider musicSlide;
-    public Slider SFXSlide;
-    public 
+    public Slider SFXSlide; 
 
     public void SettingsOpened()
     {
