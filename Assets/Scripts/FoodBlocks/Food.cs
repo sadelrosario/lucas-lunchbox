@@ -143,6 +143,11 @@ public class Food : MonoBehaviour
         }
     }
 
+    public bool isColliding()
+    {
+        return collide;
+    }
+
     public int getFoodScore()
     {
         return scoreValue;
