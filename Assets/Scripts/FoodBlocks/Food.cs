@@ -78,8 +78,7 @@ public class Food : MonoBehaviour
         offset = transform.position - WorldPos;
         while (dragging)
         {
-            Debug.Log("PRESSSS");
-
+            // Debug.Log("PRESSSS");
             transform.position = new Vector3(Mathf.RoundToInt(WorldPos.x + offset.x / gridSize) * gridSize, Mathf.RoundToInt(WorldPos.y + offset.y / gridSize) * gridSize, WorldPos.z);
             //transform.position = WorldPos + offset;
             yield return null;
@@ -110,7 +109,9 @@ public class Food : MonoBehaviour
         }
 
         Debug.DrawLine(Vector2.zero, camera.ScreenToWorldPoint(currentPos), Color.yellow);
-        if (isClickedOn) { Debug.Log("HITTTINGG");  }
+        if (isClickedOn) { Debug.Log("HITTTINGG"); }
+        
+        if (GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>().GetDone) { Debug.Log("RAR");  press.Disable(); }
     }
 
     void OnCollisionExit2D(Collision2D collision) // if collision of food exits grid area collision
