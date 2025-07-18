@@ -80,8 +80,8 @@ public class Food : MonoBehaviour
         // if press action is performed and canceled do the following
         press.performed += _ =>
             {
-                if (isClickedOn) { StartCoroutine(Drag()); }
                 if (isDone) { press.Disable(); }
+                else if (isClickedOn) { StartCoroutine(Drag()); }
             };
         // press.performed += Drag;
         press.canceled += _ => { dragging = false; };
@@ -126,11 +126,10 @@ public class Food : MonoBehaviour
             sprite.color = new Color(1, 1, 1, 1);
         }
 
-        Debug.DrawLine(Vector2.zero, WorldPos, Color.yellow);
-        //if (isClickedOn) { Debug.Log("HITTTINGG"); }
-        Debug.Log(isDone);
-        if (isDone) { Debug.Log("OVERR"); }
-        
+        // Debug.DrawLine(Vector2.zero, WorldPos, Color.yellow);
+        // if (isClickedOn) { Debug.Log("HITTTINGG"); }
+        // Debug.Log(isDone);
+        // if (isDone) { Debug.Log("OVERR"); }
         // if (GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>().GetDone) { Debug.Log("RAR");  press.Disable(); }
     }
 
