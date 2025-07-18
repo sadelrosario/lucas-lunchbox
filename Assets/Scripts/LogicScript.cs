@@ -16,7 +16,7 @@ public class LogicScript : MonoBehaviour
 
     public void gameEnd()
     {
-        Debug.Log(isDone);
+        // Debug.Log(isDone);
         gridAreaScript = GameObject.FindGameObjectWithTag("Grid").GetComponent<GridArea>();
         isColliding = gridAreaScript.foodColliding();
         if (!isColliding)
@@ -30,7 +30,7 @@ public class LogicScript : MonoBehaviour
             Debug.Log("End: " + GGG);
             SceneManager.LoadScene("Endings");
         }
-        Debug.Log("ITS DONE");
+        
         // add pop out warning if food items are colliding
     }
 
