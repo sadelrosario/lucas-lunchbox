@@ -16,10 +16,12 @@ public class AudioManager : MonoBehaviour
     {
         if (Singleton != null)
         {
-            // As long as you aren't creating multiple LevelHandler instances, throw an exception.
-            // (***the current position of the callstack will stop here***)
-            throw new Exception($"Detected more than one instance of {nameof(AudioManager)}! " +
-                $"Do you have more than one component attached to a {nameof(GameObject)}?");
+            //// As long as you aren't creating multiple LevelHandler instances, throw an exception.
+            //// (***the current position of the callstack will stop here***)
+            //throw new Exception($"Detected more than one instance of {nameof(AudioManager)}! " +
+            //    $"Do you have more than one component attached to a {nameof(GameObject)}?");
+            Destroy(this.gameObject);
+            return;
         }
         Singleton = this;
     }
