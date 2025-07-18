@@ -17,7 +17,6 @@ public class Food : MonoBehaviour
     private Vector3 offset;
     public Vector3 currentPos;
     public LayerMask hitLayer;
-    public LayerMask doneLayer;
     Camera camera;
 
     // grid math
@@ -38,7 +37,7 @@ public class Food : MonoBehaviour
     {
         get
         {
-            RaycastHit2D hit = Physics2D.Raycast(WorldPos, Vector2.up, Mathf.Infinity, hitLayer);
+            RaycastHit2D hit = Physics2D.Raycast(WorldPos, Vector2.zero, Mathf.Infinity, hitLayer);
 
             if (hit)
             {
@@ -48,21 +47,6 @@ public class Food : MonoBehaviour
         }
     }
     
-   private bool isDone
-    {
-        get
-        {
-            RaycastHit2D hitDone = Physics2D.Raycast(WorldPos, Vector2.up, Mathf.Infinity, doneLayer);
-
-            if (hitDone)
-            {
-                // Debug.Log(hitDone.point);
-                // Debug.Log("DONEEE");
-                return true;
-            }
-            return false;
-        }
-    }
 
     private void Awake()
     {
@@ -80,8 +64,8 @@ public class Food : MonoBehaviour
         // if press action is performed and canceled do the following
         press.performed += _ =>
             {
-                if (isDone) { press.Disable(); }
-                else if (isClickedOn) { StartCoroutine(Drag()); }
+                // if (isDone && !collide ) { press.Disable(); }
+                if (isClickedOn) { StartCoroutine(Drag()); }
             };
         // press.performed += Drag;
         press.canceled += _ => { dragging = false; };
@@ -128,9 +112,7 @@ public class Food : MonoBehaviour
 
         // Debug.DrawLine(Vector2.zero, WorldPos, Color.yellow);
         // if (isClickedOn) { Debug.Log("HITTTINGG"); }
-        // Debug.Log(isDone);
-        // if (isDone) { Debug.Log("OVERR"); }
-        // if (GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>().GetDone) { Debug.Log("RAR");  press.Disable(); }
+       
     }
 
     void OnCollisionExit2D(Collision2D collision) // if collision of food exits grid area collision
