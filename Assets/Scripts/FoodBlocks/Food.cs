@@ -17,8 +17,7 @@ public class Food : MonoBehaviour
     private Vector3 offset;
     public Vector3 currentPos;
     public LayerMask hitLayer;
-    public RaycastHit hit;
-    public Ray ray;
+    public LayerMask doneLayer;
     Camera camera;
 
     // grid math
@@ -43,8 +42,23 @@ public class Food : MonoBehaviour
 
             if (hit)
             {
-                // Debug.Log(hit.point);
                 return hit.transform == transform;
+            }
+            return false;
+        }
+    }
+    
+   private bool isDone
+    {
+        get
+        {
+            RaycastHit2D hitDone = Physics2D.Raycast(WorldPos, Vector2.up, Mathf.Infinity, doneLayer);
+
+            if (hitDone)
+            {
+                // Debug.Log(hitDone.point);
+                // Debug.Log("DONEEE");
+                return true;
             }
             return false;
         }
@@ -64,11 +78,15 @@ public class Food : MonoBehaviour
         screenPosition.performed += context => { currentPos = context.ReadValue<Vector2>(); };
 
         // if press action is performed and canceled do the following
-        press.performed += _ => { if(isClickedOn) StartCoroutine(Drag()); };
+        press.performed += _ =>
+            {
+                if (isDone) { press.Disable(); }
+                else if (isClickedOn) { StartCoroutine(Drag()); }
+            };
         // press.performed += Drag;
         press.canceled += _ => { dragging = false; };
         // press.Disable(); 
-        
+
     }
 
     private IEnumerator Drag()
@@ -78,8 +96,7 @@ public class Food : MonoBehaviour
         offset = transform.position - WorldPos;
         while (dragging)
         {
-            Debug.Log("PRESSSS");
-
+            // Debug.Log("PRESSSS");
             transform.position = new Vector3(Mathf.RoundToInt(WorldPos.x + offset.x / gridSize) * gridSize, Mathf.RoundToInt(WorldPos.y + offset.y / gridSize) * gridSize, WorldPos.z);
             //transform.position = WorldPos + offset;
             yield return null;
@@ -109,8 +126,11 @@ public class Food : MonoBehaviour
             sprite.color = new Color(1, 1, 1, 1);
         }
 
-        Debug.DrawLine(Vector2.zero, camera.ScreenToWorldPoint(currentPos), Color.yellow);
-        if (isClickedOn) { Debug.Log("HITTTINGG");  }
+        // Debug.DrawLine(Vector2.zero, WorldPos, Color.yellow);
+        // if (isClickedOn) { Debug.Log("HITTTINGG"); }
+        // Debug.Log(isDone);
+        // if (isDone) { Debug.Log("OVERR"); }
+        // if (GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>().GetDone) { Debug.Log("RAR");  press.Disable(); }
     }
 
     void OnCollisionExit2D(Collision2D collision) // if collision of food exits grid area collision
