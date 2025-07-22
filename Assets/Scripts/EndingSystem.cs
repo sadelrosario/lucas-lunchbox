@@ -35,7 +35,7 @@ public class EndingSystem : MonoBehaviour
         {
             //starved ending
             lucaAnim.Play("luca_bad");
-            endingName.text = "BAD ENDING";
+            endingName.text = "Not enough food!";
             audioManager.PlaySFX(audioManager.fail);
         }
         else
@@ -45,25 +45,25 @@ public class EndingSystem : MonoBehaviour
             {
                 //go ending
                 lucaAnim.Play("luca_go");
-                endingName.text = "GO ENDING";
+                endingName.text = "Too much GO food!";
             }
             else if (GGG == 2)
             {
                 //grow ending
                 lucaAnim.Play("luca_grow");
-                endingName.text = "GROW ENDING";
+                endingName.text = "Too much GROW food!";
             }
             else if (GGG == 3)
             {
                 //glow ending
                 lucaAnim.Play("luca_glow");
-                endingName.text = "GLOW ENDING";
+                endingName.text = "Too much GLOW food!";
             }
             else if (GGG == 4)
             {
                 //healthy ending
                 lucaAnim.Play("luca_good");
-                endingName.text = "BEST ENDING";
+                endingName.text = "Perfectly balanced lunchbox!";
             }
         }
     }
